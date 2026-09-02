@@ -19,9 +19,8 @@ a { color: var(--e-blue); }
 .page { max-width: 880px; margin: 0 auto; padding: 64px 28px 48px; }
 .hero { margin-bottom: 48px; }
 .title { font-weight: 300; font-size: clamp(1.6rem, 4.2vw, 2.7rem); line-height: 1.2; margin: 0 0 32px; letter-spacing: -0.01em;
-         display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.45em; }
+         display: flex; flex-direction: column; gap: 0.1em; }
 .t-name { font-weight: 800; color: var(--e-ink); }
-.t-bar { color: var(--e-teal); font-weight: 300; }
 .t-co { color: var(--e-ink); }
 .t-role { color: var(--secondary); }
 .note { max-width: 680px; border-left: 3px solid var(--e-cyan); padding-left: 22px; }
@@ -50,8 +49,6 @@ a { color: var(--e-blue); }
 .foot a { color: var(--secondary); }
 @media (max-width: 600px) {
   .page { padding: 40px 20px 32px; }
-  .title { flex-direction: column; gap: 0.1em; }
-  .t-bar { display: none; }
   .card { grid-template-columns: 1fr 24px; padding: 18px 18px; }
   .card-num { display: none; }
 }
