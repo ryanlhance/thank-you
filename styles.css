@@ -39,7 +39,12 @@ a { color: var(--e-blue); }
 .card-desc { display: block; font-size: 0.95rem; color: var(--secondary); line-height: 1.5; }
 .card-arrow { font-size: 1.4rem; color: var(--e-ink); text-align: right; transition: transform 140ms ease; }
 .card:hover .card-arrow { transform: translateX(4px); }
-.card-bonus { background: linear-gradient(90deg, var(--e-cyan-soft), var(--white) 45%); }
+.card { position: relative; overflow: hidden; }
+.card::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(90deg, var(--e-cyan-soft), var(--white) 45%);
+  transform: translateX(-101%); transition: transform 320ms ease; }
+.card:hover::before, .card:focus-visible::before { transform: translateX(0); }
+.card > * { position: relative; z-index: 1; }
 
 .foot { max-width: 880px; margin: 0 auto; padding: 24px 28px 48px; font-size: 0.85rem; color: var(--secondary); display: flex; flex-wrap: wrap; gap: 8px; }
 .foot a { color: var(--secondary); }
