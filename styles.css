@@ -10,7 +10,7 @@ body { margin: 0; font-family: "Mulish", "Helvetica Neue", Helvetica, Arial, san
 a { color: var(--e-blue); }
 
 .topbar { border-bottom: 1px solid var(--hairline); background: var(--white); }
-.topbar-inner { max-width: 1180px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar-inner { max-width: 880px; margin: 0 auto; padding: 16px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .logo { height: 22px; width: auto; display: block; }
 .pill { font-size: 0.85rem; font-weight: 600; color: var(--e-ink); text-decoration: none; white-space: nowrap;
         border: 1px solid var(--e-ink); border-radius: 100px; padding: 7px 18px; transition: background 120ms, color 120ms; }
