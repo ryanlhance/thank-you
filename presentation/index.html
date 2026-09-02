@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Hance — EPAM Continuum Presentation</title>
+  <meta name="description" content="Ryan Hance's presentation to EPAM Continuum, with speaker notes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=2" />
+</head>
+<body>
+  <div class="bar">
+    <div class="bar-left">
+      <a class="home" href="../" aria-label="Back to home"><img src="../epam-logo.svg" alt="EPAM" /></a>
+      <span class="bar-title" id="slide-title"></span>
+    </div>
+    <div class="bar-right">
+      <span class="counter" id="counter">1 / 23</span>
+      <button class="btn" id="notes-toggle" aria-pressed="false" aria-controls="notes">Notes</button>
+      <button class="btn btn-ghost" id="grid-toggle" aria-pressed="false" aria-controls="grid">All slides</button>
+      <button class="btn btn-ghost" id="fs-toggle" title="Fullscreen">⤢</button>
+    </div>
+  </div>
+
+  <div class="stage-wrap" id="stage-wrap">
+    <div class="stage" id="stage">
+      <button class="nav prev" id="prev" aria-label="Previous slide">‹</button>
+      <div class="frame" id="frame">
+        <img id="slide" alt="" draggable="false" />
+      </div>
+      <button class="nav next" id="next" aria-label="Next slide">›</button>
+    </div>
+    <aside class="notes" id="notes" hidden aria-label="Speaker notes">
+      <div class="notes-head">
+        <span class="notes-kicker">Speaker notes</span>
+        <button class="notes-close" id="notes-close" aria-label="Hide notes">&times;</button>
+      </div>
+      <div class="notes-body" id="notes-body"></div>
+    </aside>
+  </div>
+
+  <div class="grid" id="grid" hidden role="dialog" aria-label="All slides"></div>
+
+  <p class="hint">Use ← → or space to move. Press N for notes, G for all slides.</p>
+  <script src="./app.js?v=2"></script>
+</body>
+</html>

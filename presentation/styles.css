@@ -1,0 +1,50 @@
+:root { --ink:#060606; --paper:#FBFAFA; --cyan:#00F6FF; --teal:#7BBBC6; --blue:#008ACE; --hair:#E6E6E6; --sec:#717171; --body:#231F20; --stage:#111; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { margin: 0; font-family: "Mulish", "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--paper); color: var(--body);
+       display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; }
+
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 18px; background: #fff; border-bottom: 1px solid var(--hair); }
+.bar-left, .bar-right { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.home img { height: 18px; width: auto; display: block; }
+.bar-title { font-weight: 600; font-size: 0.95rem; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.counter { font-variant-numeric: tabular-nums; color: var(--sec); font-size: 0.85rem; white-space: nowrap; }
+.btn { font: inherit; font-size: 0.82rem; font-weight: 700; color: var(--ink); background: #fff; border: 1px solid var(--ink); border-radius: 100px; padding: 6px 14px; cursor: pointer; white-space: nowrap; }
+.btn:hover { background: var(--ink); color: #fff; }
+.btn[aria-pressed="true"] { background: var(--ink); color: var(--cyan); }
+.btn-ghost { border-color: var(--hair); color: var(--body); }
+.btn-ghost:hover { border-color: var(--ink); }
+
+.stage-wrap { flex: 1; display: flex; min-height: 0; background: var(--stage); }
+.stage { flex: 1; position: relative; display: flex; align-items: center; justify-content: center; padding: 16px 56px; min-width: 0; }
+.frame { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.frame img { max-width: 100%; max-height: 100%; width: auto; height: auto; aspect-ratio: 16 / 9; object-fit: contain; box-shadow: 0 12px 40px rgba(0,0,0,0.5); user-select: none; }
+.nav { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 64px; border: 0; border-radius: 10px; background: rgba(255,255,255,0.08); color: #fff; font-size: 2rem; line-height: 1; cursor: pointer; transition: background 120ms; }
+.nav:hover { background: rgba(0,246,255,0.25); }
+.nav:disabled { opacity: 0.25; cursor: default; }
+.prev { left: 8px; } .next { right: 8px; }
+
+.notes { width: min(400px, 40vw); background: #fff; border-left: 1px solid var(--hair); display: flex; flex-direction: column; min-height: 0; }
+.notes-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 18px; border-bottom: 1px solid var(--hair); }
+.notes-kicker { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sec); }
+.notes-close { border: 0; background: none; font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--sec); }
+.notes-body { padding: 16px 20px 28px; overflow-y: auto; font-size: 0.98rem; line-height: 1.6; }
+.notes-body p { margin: 0 0 0.9em; }
+.notes-body .empty { color: var(--sec); font-style: italic; }
+
+.grid { position: fixed; inset: 0; z-index: 40; overflow-y: auto; background: rgba(6,6,6,0.94); padding: 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; align-content: start; }
+.thumb { border: 2px solid transparent; border-radius: 8px; background: none; padding: 0; cursor: pointer; text-align: left; color: #ddd; font: inherit; }
+.thumb img { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 6px; display: block; }
+.thumb span { display: block; font-size: 0.78rem; padding: 6px 4px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.thumb:hover, .thumb.current { border-color: var(--cyan); }
+
+.hint { margin: 0; padding: 8px 18px; font-size: 0.78rem; color: var(--sec); background: #fff; border-top: 1px solid var(--hair); }
+
+@media (max-width: 760px) {
+  .bar-title, .hint, #fs-toggle { display: none; }
+  .stage-wrap { flex-direction: column; }
+  .stage { padding: 12px 44px; flex: 0 0 auto; }
+  .nav { width: 36px; }
+  .notes { width: auto; border-left: 0; border-top: 1px solid var(--hair); flex: 1; }
+}
