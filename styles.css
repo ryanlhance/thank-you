@@ -23,7 +23,7 @@ a { color: var(--e-blue); }
 .t-name { font-weight: 800; color: var(--e-ink); }
 .t-co { color: var(--e-ink); font-size: 0.68em; }
 .t-role { color: var(--secondary); font-size: 0.68em; }
-.note { max-width: 680px; border-left: 3px solid var(--e-cyan); padding-left: 22px; }
+.note { border-left: 3px solid var(--e-cyan); padding-left: 22px; }
 .note p { margin: 0 0 1em; font-size: 1.05rem; }
 .note p:last-child { margin-bottom: 0; }
 .note .sig { font-weight: 700; color: var(--e-ink); margin-bottom: 1.6em; }
