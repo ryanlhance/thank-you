@@ -26,6 +26,7 @@ a { color: var(--e-blue); }
 .note { max-width: 680px; border-left: 3px solid var(--e-cyan); padding-left: 22px; }
 .note p { margin: 0 0 1em; font-size: 1.05rem; }
 .note p:last-child { margin-bottom: 0; }
+.note .sig { font-weight: 700; color: var(--e-ink); margin-bottom: 1.6em; }
 
 .links { display: grid; gap: 14px; }
 .card { display: grid; grid-template-columns: 44px 1fr 32px; align-items: center; gap: 18px; text-decoration: none; color: inherit;
